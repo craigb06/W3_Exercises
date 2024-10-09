@@ -27,6 +27,5 @@ WHERE ShipCountry = 'Germany';
 #Question 5
 SELECT orderid, orderdate, shipname, shipaddress
 FROM northwind.orders INNER JOIN northwind.`order details`
-AS orderdetails
 USING (OrderID)
 WHERE ProductID =34;
