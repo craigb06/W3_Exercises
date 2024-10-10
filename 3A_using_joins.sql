@@ -29,3 +29,8 @@ SELECT orderid, orderdate, shipname, shipaddress
 FROM northwind.orders INNER JOIN northwind.`order details`
 USING (OrderID)
 WHERE ProductID =34;
+
+SELECT orders.orderid, orderdate, shipname, shipaddress
+FROM northwind.orders INNER JOIN northwind.`order details`
+ON orders.OrderID = `order details`.OrderID
+WHERE ProductID =34;
