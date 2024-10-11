@@ -11,9 +11,14 @@ where unitsinstock =0 and unitsonorder >=1;
 #answer Gorgonzola Telino
 
 #question #4
-SELECT * from categories;
+SELECT * from northwind.categories;
 #The products table identifies the type of item sold by first creating a categories table with a description of the item based on the categoryid
-select * from products where CategoryID =8;
+select * from northwind.products where CategoryID =8;
+#another way to write this query
+SELECT * FROM northwind.products
+WHERE CategoryID =
+	(SELECT CategoryID FROM northwind.categories
+    WHERE CategoryName = 'Seafood');
 
 #Question #5
 SELECT * from employees where title LIKE '%manager%';
