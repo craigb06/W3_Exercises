@@ -53,8 +53,6 @@ SELECT AVG(UnitPrice), CategoryID, CategoryName
 FROM northwind.products JOIN northwind.categories
 USING (CategoryID) GROUP BY CategoryID, CategoryName;
 
-#After revisiting this question I believe I may have done it wrong so here is a new query that gives different result
-
 #question #8
 SELECT SupplierID, COUNT(ProductName) AS Supply5
 FROM northwind.products GROUP BY SupplierID
